@@ -1,4 +1,4 @@
-#include "st7735/st7735.h"
+#include "st7735.h"
 
 extern const unsigned char gImage_test_image[32768];
 

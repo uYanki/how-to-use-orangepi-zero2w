@@ -7,7 +7,6 @@
 #define DELAY           0x80
 #define DATA_BLOCK_SIZE 4096
 
-// based on Adafruit ST7735 library for Arduino
 static const uint8_t
     init_cmds1[] = {            // Init for 7735R, part 1 (red or green tab)
         15,                     // 15 commands in list:

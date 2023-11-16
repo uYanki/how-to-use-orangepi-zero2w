@@ -6,11 +6,27 @@
 
 ![demo](.assest/README/demo.jpg)
 
+#### Pinmap
+
+![pin](.assest/README/pin.png)
+
 #### Usage
 
 ```bash
+# enable spi-dev
 $ sudo su
-$ chmod 777  ./run.sh
-$ ./run.sh
+$ orangepi-config
+```
+
+![config](.assest/README/config.png)
+
+```bash
+# check used gpio
+$ gpio readall
+
+# build then run
+$ chmod 777 ./build.sh
+$ ./build.sh
+$ ./app
 ```
 
