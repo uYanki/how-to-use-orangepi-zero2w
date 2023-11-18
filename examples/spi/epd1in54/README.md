@@ -10,7 +10,7 @@
 
 #### Usage
 
-```
+```bash
 # build then run
 $ chmod 777 ./build.sh
 $ ./build.sh

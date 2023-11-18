@@ -14,7 +14,7 @@
 
 ```bash
 # enable spi-dev
-$ sudo su
+$ su
 $ orangepi-config
 ```
 

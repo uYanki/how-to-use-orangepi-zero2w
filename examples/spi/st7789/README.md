@@ -2,7 +2,7 @@
 
 ### build then run
 
-```
+```bash
 $ make
 $ make run
 ```

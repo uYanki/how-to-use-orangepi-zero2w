@@ -268,7 +268,7 @@
 
 #ifndef CFG_NO_CS
 #define ST7789_Select()   digitalWrite(ST7789_CS_PIN, LOW)
-#define ST7789_UnSelect() digitalWrite(ST7789_CS_PIN, HIGH);
+#define ST7789_UnSelect() digitalWrite(ST7789_CS_PIN, HIGH)
 #else
 #define ST7789_Select()
 #define ST7789_UnSelect()
