@@ -1,11 +1,5 @@
 #### I2C
 
-##### 
-
-
-
-
-
 ![pin_i2c](.assest/README/pin_i2c.png)
 
 #### PWM
@@ -132,6 +126,16 @@ chmod 777 build
 ```
 
 ![wiringop_insatll](.assest/README/wiringop_insatll.png)
+
+## Debug
+
+```bash
+# 开启调试模式
+export WIRINGPI_DEBUG=TRUE
+
+# 关闭调试模式
+unset WIRINGPI_DEBUG
+```
 
 ## Usage
 
