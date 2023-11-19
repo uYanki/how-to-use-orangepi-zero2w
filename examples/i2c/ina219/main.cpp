@@ -12,7 +12,7 @@ INA219 ina219;
 
 int main()
 {
-#if 0
+#if 1
     cout << "init :" << ina219.init(ADDR_40) << endl;
     cout << "reset:" << ina219.reset() << endl;
     cout << "cal  :" << ina219.setCalibration_0_4A(_16V, B_12Bits_128S_69MS, S_12Bits_128S_69MS, ShuntAndBusVoltageContinuous) << endl;
