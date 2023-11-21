@@ -55,6 +55,13 @@ MFRC522::MFRC522()
     digitalWrite(MFRC522_CS_PIN, HIGH);
 #endif
 
+#ifdef MFRC522_IRQ_PIN
+    // 中断无法绑定到 GPIO, 暂时不用
+    pinMode(MFRC522_IRQ_PIN, INPUT);
+    pullUpDnControl(MFRC522_IRQ_PIN, PUD_DOWN);
+    wiringPiISR(MFRC522_IRQ_PIN, INT_EDGE_RISING, mfrc522_irq_handler);
+#endif
+
     wiringPiSPISetupMode(MFRC522_SPI_CH, MFRC522_SPI_CS, 1e6, 0);
 }
 
@@ -228,6 +235,7 @@ byte MFRC522::PCD_CalculateCRC(
  */
 void MFRC522::PCD_Init()
 {
+#ifdef MFRC522_RST_PIN
     if (digitalRead(MFRC522_RST_PIN) == LOW)  // The MFRC522 chip is in power down mode.
     {
         digitalWrite(MFRC522_RST_PIN, HIGH);  // Exit power down mode. This triggers a hard reset.
@@ -235,6 +243,7 @@ void MFRC522::PCD_Init()
         delay(50);
     }
     else
+#endif
     {  // Perform a soft reset
         PCD_Reset();
     }

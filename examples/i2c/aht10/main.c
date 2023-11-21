@@ -10,7 +10,7 @@ int main()
     {
         temp = read_temperature();
         hum  = read_humidity();
-        printf("\rT: %.2f C || H: %.2f %%", temp, hum);
+        printf("\rT: %.2f C, H: %.2f %%", temp, hum);
         fflush(stdout);
         delay(1000);
     }
