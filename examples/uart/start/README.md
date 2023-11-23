@@ -19,8 +19,6 @@ gpio serial /dev/ttyS1
 
 ```
 
-
-
 ![uart_test](.assest/README/uart_test.png)
 
 
